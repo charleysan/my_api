@@ -24,8 +24,8 @@ class ProductsController < ApplicationController
   def update
     product = Product.find(params[:id])
     product.update(
-      name: params[:name],
-      price: params[:price]
+      name: params[:name] || product.name,
+      price: params[:price] || product.price
       )
     render json: product
   end

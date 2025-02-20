@@ -13,13 +13,14 @@ Rails.application.routes.draw do
   get '/flowers' => 'flowers#index'
   get '/flowers/:id' => 'flowers#show'
   post '/flowers' => 'flowers#create'
-  # put '/flowers/:id' => 'flowers#update'
-  # delete '/flowers/:id' => 'flowers#delete'
+  put '/flowers/:id' => 'flowers#update'
+  delete '/flowers/:id' => 'flowers#delete'
 
-  get '/shoes' => 'shoes#index'
-
-
-
+  get '/flower_order' => 'flower_order#index'
+  get '/flower_order/:id' => 'flower_order#show'
+  post '/flower_order' => 'flower_order#create'
+  put '/flower_order/:id' => 'flower_order#update'
+  delete '/flower_order/:id' => 'flower_order#destroy'
 end
 
 
