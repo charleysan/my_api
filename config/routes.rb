@@ -21,6 +21,11 @@ Rails.application.routes.draw do
   post '/flower_order' => 'flower_order#create'
   put '/flower_order/:id' => 'flower_order#update'
   delete '/flower_order/:id' => 'flower_order#destroy'
+
+  post '/login' => 'sessions#create'
+  
+  get '/users' => 'users#index'
+  post '/users' => 'users#create'
 end
 
 

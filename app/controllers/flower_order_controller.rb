@@ -1,4 +1,6 @@
 class FlowerOrderController < ApplicationController
+  skip_before_action :authorize_request, only: [:index]
+  
   def index
     puts "Welcome to your local Flower Shop"
     order = FlowerOrder.all
